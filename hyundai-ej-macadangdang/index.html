@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta id="page-description" name="description" content="Digital business card." />
+    <meta name="theme-color" content="#dff2ff" />
+    <title>Digital Business Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to profile</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <nav class="header-actions" aria-label="Card actions">
+          <a class="header-link" href="#contact">Get in touch</a>
+          <button class="share-button" id="share-button" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M5 13v6h14v-6" />
+            </svg>
+            <span>Share card</span>
+          </button>
+        </nav>
+      </header>
+
+      <main id="main">
+        <section class="profile-card" aria-labelledby="profile-name">
+          <div class="cover">
+          </div>
+
+          <div class="profile-content">
+            <div class="identity">
+              <div class="avatar" id="avatar">
+                <img class="profile-photo" id="profile-photo" src="Images/dp.jpg" alt="Portrait of Erik Jourdan Macadangdang" />
+                <span class="avatar-badge" aria-hidden="true">
+                  <svg viewBox="0 0 20 20">
+                    <path d="m5 10 3.2 3.2L15 6.5" />
+                  </svg>
+                </span>
+              </div>
+              <p class="eyebrow" id="profile-eyebrow"></p>
+              <h1 id="profile-name"></h1>
+              <p class="job-title" id="profile-title"></p>
+              <p class="bio" id="profile-bio" hidden></p>
+            </div>
+
+            <div class="primary-actions" aria-label="Quick actions">
+              <a
+                class="save-button"
+                id="save-contact"
+                href="Erik-Jourdan-Macadangdang.vcf"
+                download="Erik-Jourdan-Macadangdang.vcf"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M12 15V3m0 0L7.5 7.5M12 3l4.5 4.5M5 13v6h14v-6" />
+                </svg>
+                <span>Save contact</span>
+              </a>
+              <a class="action-card" id="call-action">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 3a14 14 0 0 1-7-7l3-2-2-5Z" /></svg>
+                </span>
+                <span>Call</span>
+              </a>
+              <a class="action-card" id="message-action">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5 8 8 0 0 1-3.6-.9L4 20l1.4-4.2a7.4 7.4 0 0 1-.9-3.6A7.5 7.5 0 0 1 12 4.7a7.5 7.5 0 0 1 8 6.8Z" /><path d="M8 12h.01M12 12h.01M16 12h.01" /></svg>
+                </span>
+                <span>Text / SMS </span>
+              </a>
+              <a class="action-card" id="viber-action">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5 8 8 0 0 1-3.6-.9L4 20l1.4-4.2a7.4 7.4 0 0 1-.9-3.6A7.5 7.5 0 0 1 12 4.7a7.5 7.5 0 0 1 8 6.8Z" /><path d="M9 9.5c.5 2.5 2 4 4.5 4.5l1-1.2 2 .8-.3 2c-4.4.4-8.4-3.6-8-8l2-.3.8 2Z" /></svg>
+                </span>
+                <span>Viber</span>
+              </a>
+              <a class="action-card" id="email-action">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
+                </span>
+                <span>Send Email</span>
+              </a>
+              <a class="action-card" id="location-action">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>
+                </span>
+                <span>Google Maps</span>
+              </a>
+              <a class="action-card" id="released-action" href="#released-section">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 7h18v13H3z" /><path d="m3 16 5-5 4 4 3-3 6 6M8 7l2-3h4l2 3" /></svg>
+                </span>
+                <span>Authorized Dealer</span>
+              </a>
+              <a class="action-card" id="recent-action" href="#recent-section">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 7h18v13H3z" /><path d="m3 16 5-5 4 4 3-3 6 6M8 7l2-3h4l2 3" /></svg>
+                </span>
+                <span>Recently Released Units</span>
+              </a>
+            </div>
+
+            <div class="contact-details" id="contact">
+              <a id="email-detail">
+                <span class="detail-icon" aria-hidden="true">@</span>
+                <span id="email-text"></span>
+                <span class="detail-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 16 16">
+                    <path d="M5 11 11 5M5.5 5H11v5.5" />
+                  </svg>
+                </span>
+              </a>
+              <a id="phone-detail">
+                <span class="detail-icon detail-phone" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 3a14 14 0 0 1-7-7l3-2-2-5Z" />
+                  </svg>
+                </span>
+                <span id="phone-text"></span>
+                <span class="detail-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 16 16">
+                    <path d="M5 11 11 5M5.5 5H11v5.5" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <div class="social-section" id="social-section" hidden>
+              <div class="section-heading">
+                <h2>Find me around</h2>
+                <span>LET’S CONNECT</span>
+              </div>
+              <div class="social-links" id="social-links" aria-label="Social profiles"></div>
+            </div>
+
+            <section class="released-section" id="released-section" aria-labelledby="released-heading">
+              <div class="section-heading">
+                <h2 id="released-heading">
+                  <button
+                    class="released-toggle"
+                    id="released-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="released-units"
+                  >
+                    <span>Authorized Dealer</span>
+                    <svg aria-hidden="true" viewBox="0 0 20 20">
+                      <path d="m5 7.5 5 5 5-5" />
+                    </svg>
+                  </button>
+                </h2>
+                <span>BRANDS</span>
+              </div>
+              <div class="released-units" id="released-units" hidden>
+                <div class="released-track" id="released-track">
+                  <figure class="released-unit lineup-unit">
+                    <img src="Images/lineup.png" alt="Vehicle brands represented by Erik Jourdan Macadangdang" />
+                  </figure>
+                </div>
+              </div>
+              <section class="recent-section" id="recent-section" aria-labelledby="recent-heading">
+                <div class="section-heading">
+                  <h2 id="recent-heading">
+                    <button
+                      class="released-toggle"
+                      id="recent-toggle"
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="recent-units"
+                    >
+                      <span>Recently Released Units</span>
+                      <svg aria-hidden="true" viewBox="0 0 20 20">
+                        <path d="m5 7.5 5 5 5-5" />
+                      </svg>
+                    </button>
+                  </h2>
+                  <span>RECENT DELIVERIES</span>
+                </div>
+                <div class="recent-units" id="recent-units" hidden>
+                  <div class="recent-deck" id="recent-deck" aria-label="Recently released units">
+                    <button class="recent-card is-active" type="button" aria-label="Show next delivery photo, 1 of 8">
+                      <img src="Images/1.jpg" alt="Customer vehicle delivery at Hyundai Santiago City, photo 1" />
+                    </button>
+                    <button class="recent-card is-next" type="button" aria-label="Show next delivery photo, 2 of 8" aria-hidden="true" tabindex="-1">
+                      <img src="Images/2.jpg" alt="Customer vehicle delivery at Hyundai Santiago City, photo 2" />
+                    </button>
+                    <button class="recent-card is-next-two" type="button" aria-label="Show next delivery photo, 3 of 8" aria-hidden="true" tabindex="-1">
+                      <img src="Images/3.jpg" alt="Customer vehicle delivery at Hyundai Santiago City, photo 3" />
+                    </button>
+                    <button class="recent-card is-hidden" type="button" aria-label="Show next delivery photo, 4 of 8" aria-hidden="true" tabindex="-1">
+                      <img src="Images/4.jpg" alt="Customer vehicle delivery at Hyundai Santiago City, photo 4" />
+                    </button>
+                    <button class="recent-card is-hidden" type="button" aria-label="Show next delivery photo, 5 of 8" aria-hidden="true" tabindex="-1">
+                      <img src="Images/5.jpg" alt="Customer vehicle delivery at Hyundai Santiago City, photo 5" />
+                    </button>
+                    <button class="recent-card is-hidden" type="button" aria-label="Show next delivery photo, 6 of 8" aria-hidden="true" tabindex="-1">
+                      <img src="Images/6.jpg" alt="Customer vehicle delivery at Hyundai Santiago City, photo 6" />
+                    </button>
+                    <button class="recent-card is-hidden" type="button" aria-label="Show next delivery photo, 7 of 8" aria-hidden="true" tabindex="-1">
+                      <img src="Images/7.jpg" alt="Customer vehicle delivery at Hyundai Santiago City, photo 7" />
+                    </button>
+                    <button class="recent-card is-hidden" type="button" aria-label="Show next delivery photo, 8 of 8" aria-hidden="true" tabindex="-1">
+                      <img src="Images/8.jpg" alt="Customer vehicle delivery at Hyundai Santiago City, photo 8" />
+                    </button>
+                  </div>
+                  <div class="recent-controls" aria-label="Delivery photo controls">
+                    <button class="recent-control" id="recent-previous" type="button" aria-label="Previous photo">
+                      <svg aria-hidden="true" viewBox="0 0 20 20"><path d="m12.5 4-6 6 6 6" /></svg>
+                    </button>
+                    <span class="recent-counter" id="recent-counter" aria-live="polite" aria-atomic="true">01 / 08</span>
+                    <button class="recent-control" id="recent-next" type="button" aria-label="Next photo">
+                      <svg aria-hidden="true" viewBox="0 0 20 20"><path d="m7.5 4 6 6-6 6" /></svg>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </section>
+          </div>
+          <footer class="card-footer">
+            <span>Digital business card</span>
+            <span>© <span id="current-year"></span></span>
+          </footer>
+        </section>
+      </main>
+      <section class="coffee-section" aria-labelledby="coffee-heading">
+        <h2 id="coffee-heading" class="coffee-heading">
+          <button class="coffee-toggle" id="coffee-toggle" type="button" aria-expanded="false" aria-controls="coffee-details">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z" />
+              <path d="M17 10h1a3 3 0 1 1 0 6h-2M7 4v2m5-2v2" />
+            </svg>
+            <span>Support the Developer</span>
+          </button>
+        </h2>
+        <div class="coffee-details" id="coffee-details" hidden>
+          <p class="coffee-hint">Scan the GCash QR code to support the developer. Every little bit helps!</p>
+          <img class="coffee-qr" src="Images/tip.jpg" alt="GCash QR code for sending a coffee tip" />
+        </div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
